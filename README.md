@@ -1,2 +1,3 @@
 # JavaNote
-Java的代码学习笔记
+
+Java的代码笔记

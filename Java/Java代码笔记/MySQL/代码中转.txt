@@ -1,0 +1,42 @@
+DROP Table if EXISTS user;
+
+CREATE TABLE user ( 
+`id` VARCHAR (40)NOT NULL,
+`login_name` VARCHAR (20) NOT NULL,
+`password` VARCHAR(50) NOT NULL,
+`mobile` VARCHAR(20) NOT NULL,
+`email` VARCHAR(50) ,
+`name` VARCHAR(50) NOT NULL,
+`gender` VARCHAR(10) NOT NULL,
+`gmt_created` datetime ,
+`gmt_modified` datetime ,
+PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP Table if EXISTS questionnaire;
+
+CREATE TABLE questionnaire ( 
+`id` VARCHAR (40)NOT NULL,
+`title` VARCHAR (40) NOT NULL,
+`description` TEXT NOT NULL,
+`status` VARCHAR(20) NOT NULL,
+`content` TEXT NOT NULL,
+`author` VARCHAR(40) NOT NULL,
+`gmt_created` datetime ,
+`gmt_modified` datetime ,
+PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP Table if EXISTS reply;
+
+CREATE TABLE reply ( 
+`id` VARCHAR (40)NOT NULL,
+`ques_id` VARCHAR (40) NOT NULL,
+`ques_index` int(20) NOT NULL,
+`user_id` VARCHAR(40) NOT NULL,
+`content` TEXT NOT NULL,
+`gmt_created` datetime ,
+`gmt_modified` datetime ,
+PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
