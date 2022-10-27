@@ -1,3 +1,17 @@
 git remote add github https://github.com/wheelover/WorkSystem.git
 git push -u origin
 git push -u github
+修改远程仓库地址：
+git remote set-url origin <remote-url>
+1
+仓库路径查询查询：
+
+git remote -v
+1
+添加远程仓库：
+
+git remote add origin <你的项目地址> //注:项目地址形式为:https://gitee.com/xxx/xxx.git或者 git@gitee.com:xxx/xxx.git
+1
+删除指定的远程仓库：
+
+git remote rm origin
